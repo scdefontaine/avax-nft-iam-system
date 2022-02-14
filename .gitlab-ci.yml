@@ -36,28 +36,30 @@ test:
   script:
     - echo test
 
+.deploy: &deploy:
+  script:
+    - echo $JOB_MESSAGE
+
 deploy-local:
+  <<: *deploy
   image: golang
   stage: deploy
   variables:
-    TEST: test
+    JOB_MESSAGE: localnet
   allow_failure: false
   only:
     - main
-  script:
-    - echo test
 
 deploy-testnet:
+  <<: *deploy
   image: go
   stage: deploy
   when: manual
   allow_failure: false
   variables:
-    TEST: test
+    JOB_MESSAGE: testnet
   only:
     - main
-  script:
-    - echo test
 
 deploy-mainnet:
   image: go
@@ -65,8 +67,6 @@ deploy-mainnet:
   when: manual
   allow_failure: false
   variables:
-    TEST: test
+    JOB_MESSAGE: mainnet
   only:
     - main
-  script:
-    - echo test
