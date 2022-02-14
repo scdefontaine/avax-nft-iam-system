@@ -5,8 +5,10 @@ This is an NFT IAM System built for the Avalanche Network
 
 # Prerequisites
 
-1. Go Lang Environment
-
+### Setup Local Go Environment
+  - Download and install Go
+  - Configure $GOPATH and build directory
+    - `export GOPATH=$HOME/go`
 # Building The Project
 
 # Running the AVA-Sim Local Simulator
