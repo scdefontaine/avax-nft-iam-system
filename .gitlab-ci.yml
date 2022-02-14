@@ -7,7 +7,7 @@ stages:
   - deploy
 
 env-setup:
-  image: go
+  image: golang
   stage: env-setup
   variables:
     TEST: test
@@ -17,7 +17,7 @@ env-setup:
     - echo test
 
 compile:
-  image: go
+  image: golang
   stage: compile
   variables:
     TEST: test
@@ -27,8 +27,8 @@ compile:
     - echo test
 
 test:
-  image: go
-  stage: env-setup
+  image: golang
+  stage: test
   variables:
     TEST: test
   only:
@@ -37,7 +37,7 @@ test:
     - echo test
 
 deploy-local:
-  image: go
+  image: golang
   stage: deploy
   variables:
     TEST: test
