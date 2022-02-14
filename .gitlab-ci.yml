@@ -36,7 +36,7 @@ test:
   script:
     - echo test
 
-.deploy: &deploy:
+.deploy: &deploy
   script:
     - echo $JOB_MESSAGE
 
