@@ -1,0 +1,72 @@
+image: alpine
+
+stages:
+  - env-setup
+  - compile
+  - test
+  - deploy
+
+env-setup:
+  image: go
+  stage: env-setup
+  variables:
+    TEST: test
+  only:
+    - main
+  script:
+    - echo test
+
+compile:
+  image: go
+  stage: compile
+  variables:
+    TEST: test
+  only:
+    - main
+  script:
+    - echo test
+
+test:
+  image: go
+  stage: env-setup
+  variables:
+    TEST: test
+  only:
+    - main
+  script:
+    - echo test
+
+deploy-local:
+  image: go
+  stage: deploy
+  variables:
+    TEST: test
+  allow_failure: false
+  only:
+    - main
+  script:
+    - echo test
+
+deploy-testnet:
+  image: go
+  stage: deploy
+  when: manual
+  allow_failure: false
+  variables:
+    TEST: test
+  only:
+    - main
+  script:
+    - echo test
+
+deploy-mainnet:
+  image: go
+  stage: deploy
+  when: manual
+  allow_failure: false
+  variables:
+    TEST: test
+  only:
+    - main
+  script:
+    - echo test
