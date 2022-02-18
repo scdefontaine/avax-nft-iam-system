@@ -63,6 +63,9 @@ const config: HardhatUserConfig = {
       },
       {
         version: "0.8.0"
+      },
+      {
+        version: "0.8.1"
       }
     ]
   },
@@ -93,7 +96,9 @@ const config: HardhatUserConfig = {
       url: 'https://api.avax-test.network/ext/bc/C/rpc',
       gasPrice: 225000000000,
       chainId: 43113,
-      accounts: []
+      accounts: [
+        "51e984c66fca8b635cd8b0918b4a9c04db0a0c9ab1462bbb4e047e746520ee4a"
+      ]
     },
     mainnet: {
       url: 'https://api.avax.network/ext/bc/C/rpc',
