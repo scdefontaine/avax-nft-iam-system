@@ -2,8 +2,10 @@ FROM alpine
 
 WORKDIR /ava-sim
 
-COPY . ./ava-sim
+COPY . ./
 
-RUN ./ava-sim/scripts/build.sh
+RUN ls
+
+RUN ./scripts/build.sh
 
 # CMD ["./scripts/run.sh"]

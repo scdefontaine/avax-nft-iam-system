@@ -1,0 +1,12 @@
+{
+  "name": "Admin Role IPFS",
+  "tokenId": 0,
+  "image": "https://gateway.pinata.cloud/ipfs/QmTrh1feMmtSw2HSbFqnQ4wJMTYqi6ReSXkYcaLiFuvcfS/0.jpg",
+  "description": "Admin Role for IPFS",
+  "attributes": [
+    {
+      "trait_type": "Role",
+      "value": "ADMIN_ROLE"
+    }
+  ]
+}
